@@ -11,11 +11,11 @@ from dateutil import parser, tz
 
 
 try:
-    api_id = int(os.environ.get("API_ID"))   # Get it from my.telegram.org
-    api_hash = os.environ.get("API_HASH")   # Get it from my.telegram.org
+    api_id = 1663481   # Get it from my.telegram.org
+    api_hash = "5b2a54725e42f321a99bfddfbdc042ca"   # Get it from my.telegram.org
     feed_urls = ["http://feeds.feedburner.com/x265/rip","http://feeds.feedburner.com/pahe/ph","http://feeds.feedburner.com/heteam"]  # RSS Feed URL of the site.
     bot_token = os.environ.get("BOT_TOKEN")   # Get it by creating a bot on https://t.me/botfather
-    log_channel = int(os.environ.get("LOG_CHANNEL"))   # Telegram Channel ID where the bot is added and have write permission. You can use group ID too.
+    log_channel = -1001513061317   # Telegram Channel ID where the bot is added and have write permission. You can use group ID too.
     check_interval = int(os.environ.get("INTERVAL", 10))   # Check Interval in seconds.  
     max_instances = int(os.environ.get("MAX_INSTANCES", 3))   # Max parallel instance to be used.
 except Exception as e:
