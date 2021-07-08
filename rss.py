@@ -10,14 +10,10 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from dateutil import parser, tz
 
 
-if os.path.exists("config.env"):
-    load_dotenv("config.env")
-
-
 try:
     api_id = int(os.environ.get("API_ID"))   # Get it from my.telegram.org
     api_hash = os.environ.get("API_HASH")   # Get it from my.telegram.org
-    feed_urls = list(set(i for i in os.environ.get("FEED_URLS").split("|")))  # RSS Feed URL of the site.
+    feed_urls = ["http://feeds.feedburner.com/x265/rip","http://feeds.feedburner.com/pahe/ph","http://feeds.feedburner.com/heteam"]  # RSS Feed URL of the site.
     bot_token = os.environ.get("BOT_TOKEN")   # Get it by creating a bot on https://t.me/botfather
     log_channel = int(os.environ.get("LOG_CHANNEL"))   # Telegram Channel ID where the bot is added and have write permission. You can use group ID too.
     check_interval = int(os.environ.get("INTERVAL", 10))   # Check Interval in seconds.  
